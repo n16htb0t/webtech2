@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 2:</title>
+</head>
+<body>
+    <h1>Quiz 2</h1>
+<h2> 1. Task:</h2>
+<p>
+• Create a webpage where the user enters a number.<br>
+• When clicking a button, the number should be added to an array.<br>
+• Another button should filter only even numbers and display them on the screen.<br>
+</p>
+<h3>Answer:</h3>
+<input type="number" id="numberInput" placeholder="Add Number">
+<button id="addNumber">Add</button>
+<button id="filterEven">Only even</button>
+<p id="output"></p>
+<script>
+    let numbers = [];
+
+    document.getElementById('addNumber').addEventListener('click', function() {
+        const number = parseInt(document.getElementById('numberInput').value);
+        if (!isNaN(number)) {
+            numbers.push(number);
+            document.getElementById('numberInput').value = '';
+            console.log(numbers);
+        }
+    });
+
+    document.getElementById('filterEven').addEventListener('click', function() {
+        const evenNumbers = numbers.filter(num => num % 2 === 0);
+        document.getElementById('output').innerText = 'Even Numbers: ' + evenNumbers.join(', ');
+    });
+</script>
+
+<h2>
+2. Task:</h2>
+
+<p>  
+   • The user enters a product name and price. <br>
+   • On button click, the product should be added to an array of objects.<br>
+   • All products should be displayed on the screen.
+</p>
+<h3>Answer:</h3>
+
+<input type="textInput" id="productName">
+<input type="number" id="productPrice" placeholder="Price">
+<button id="addProduct">Add Product</button>
+<ul id="productList"></ul>
+<script>
+    let products = [];
+
+    document.getElementById('addProduct').addEventListener('click', function() {
+        const name = document.getElementById('productName').value;
+        const price = parseFloat(document.getElementById('productPrice').value);
+        if (name && !isNaN(price)) {
+            products.push({ name, price });
+            document.getElementById('productName').value = '';
+            document.getElementById('productPrice').value = '';
+            displayProducts();
+        }
+    });
+
+    function displayProducts() {
+        const productList = document.getElementById('productList');
+        productList.innerHTML = '';
+        products.forEach(product => {
+            const li = document.createElement('li');
+            li.innerText = `${product.name} - $${product.price.toFixed(2)}`;
+            productList.appendChild(li);
+        });
+    }
+</script>
+
+<h2>
+3. Task:
+</h2>
+<p>
+• The user enters text and selects bold, italic, or colored styling.<br>
+• On button click, the selected style should be applied.
+Html</p>
+<h3>Answer:</h3>
+<input type="text" id="textInput" placeholder="Type Text">
+<select id="styleSelect">
+    <option value="bold">Bold</option>
+    <option value="italic">Italic</option>
+    <option value="color">Color</option>
+</select>
+<button id="applyStyle">Change</button>
+<h2 id="styledText">Here is Text</h2>
+<script>
+    document.getElementById('applyStyle').addEventListener('click', function() {
+        const text = document.getElementById('textInput').value;
+        const style = document.getElementById('styleSelect').value;
+        const styledText = document.getElementById('styledText');
+
+        styledText.innerText = text;
+
+        if (style === 'bold') {
+            styledText.style.fontWeight = 'bold';
+            styledText.style.fontStyle = 'normal';
+            styledText.style.color = 'black';
+        } else if (style === 'italic') {
+            styledText.style.fontWeight = 'normal';
+            styledText.style.fontStyle = 'italic';
+            styledText.style.color = 'black';
+        } else if (style === 'color') {
+            styledText.style.fontWeight = 'normal';
+            styledText.style.fontStyle = 'normal';
+            styledText.style.color = 'red'; // Change to any color you want
+        }
+    });
+</script>
+
+</body>
+</html>
