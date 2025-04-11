@@ -1,4 +1,4 @@
-# WebTech2
+# webtech2
 
 ## Helpful Websites
 
