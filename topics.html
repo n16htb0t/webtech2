@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript DOM Notes</title>
+</head>
+<body>
+    <h2>1. getElementById</h2>
+    <p id="message">Hello DOM</p>
+    <script>
+        // Selecting element by ID
+        const message = document.getElementById("message");
+        console.log("getElementById:", message);
+    </script>
+
+    <h2>2. getElementsByName</h2>
+    <input type="radio" name="language" value="JavaScript">
+    <input type="radio" name="language" value="Python">
+    <input type="radio" name="language" value="Java">
+    <script>
+        // Selecting elements by name attribute
+        const radios = document.getElementsByName("language");
+        console.log("getElementsByName:", radios);
+    </script>
+
+    <h2>3. getElementsByTagName</h2>
+    <h1>Heading One</h1>
+    <h1>Heading Two</h1>
+    <script>
+        // Selecting elements by tag name
+        const headings = document.getElementsByTagName("h1");
+        console.log("getElementsByTagName:", headings);
+    </script>
+
+    <h2>4. getElementsByClassName</h2>
+    <div class="container">
+        <h1 class="message1">Hello</h1>
+    </div>
+    <script>
+        // Selecting elements by class name
+        const classMessages = document.getElementsByClassName("message1");
+        console.log("getElementsByClassName:", classMessages);
+    </script>
+
+    <h2>5. querySelector & querySelectorAll</h2>
+    <div id="container">
+        <span class="message2">Hello</span>
+        <span class="message2">World</span>
+    </div>
+    <script>
+        // Selecting using querySelector and querySelectorAll
+        const query1 = document.querySelector(".message1"); // first match only
+        const queryAll = document.querySelectorAll(".message2"); // all matches
+        console.log("querySelector:", query1);
+        console.log("querySelectorAll:", queryAll);
+    </script>
+
+    <h2>6. Traversing the DOM</h2>
+    <div class="title">
+        <p class="text">Hello</p>
+        <p>welcome</p>
+        <p>to</p>
+        <p>DOM</p>
+        <p>Traversing</p>
+        <p>elements</p>
+    </div>
+    <script>
+        // DOM Traversal
+        const title = document.querySelector(".title");
+        console.log("parentNode:", title.parentNode);
+        console.log("childNodes:", title.childNodes);
+        console.log("children:", title.children);
+        console.log("firstChild:", title.firstChild);
+        console.log("firstElementChild:", title.firstElementChild);
+        console.log("lastChild:", title.lastChild);
+        console.log("lastElementChild:", title.lastElementChild);
+        console.log("nextSibling:", title.nextSibling);
+        console.log("nextElementSibling:", title.nextElementSibling);
+        console.log("previousSibling:", title.previousSibling);
+        console.log("previousElementSibling:", title.previousElementSibling);
+    </script>
+
+    <h2>7. Creating and Manipulating Elements</h2>
+    <script>
+        // Creating and modifying elements
+        const newPara = document.createElement("p");
+        newPara.textContent = "This is a dynamically created paragraph.";
+        newPara.style.cssText = "color: red; font-size: 20px; font-weight: bold; font-family: Arial;";
+        title.appendChild(newPara);
+
+        newPara.textContent = "Updated with textContent.";
+        newPara.innerHTML = "<strong>Updated with innerHTML</strong>";
+        newPara.after(document.createElement("hr"));
+        newPara.append(" More appended content.");
+        newPara.prepend("Start: ");
+        newPara.insertAdjacentHTML("beforeend", "<em> (insertAdjacentHTML)</em>");
+
+        const replace = document.createElement("p");
+        replace.textContent = "Replacement paragraph.";
+        title.replaceChild(replace, newPara);
+
+        const cloned = replace.cloneNode(true);
+        title.appendChild(cloned);
+        title.removeChild(cloned);
+
+        const beforePara = document.createElement("p");
+        beforePara.textContent = "Inserted before.";
+        title.insertBefore(beforePara, replace);
+    </script>
+
+    <h2>8. Attributes</h2>
+    <script>
+        // Attribute manipulation
+        beforePara.setAttribute("data-custom", "value");
+        console.log("getAttribute:", beforePara.getAttribute("data-custom"));
+        console.log("hasAttribute:", beforePara.hasAttribute("data-custom"));
+        beforePara.removeAttribute("data-custom");
+    </script>
+
+    <h2>9. Styles and Classes</h2>
+    <script>
+        // Style and class manipulation
+        beforePara.style.cssText = "color: blue; font-size: 18px; font-style: italic;";
+        const computed = getComputedStyle(beforePara);
+        console.log("Computed style color:", computed.color);
+
+        beforePara.className = "new-class";
+        console.log("className:", beforePara.className);
+
+        beforePara.classList.add("added-class");
+        beforePara.classList.remove("new-class");
+        beforePara.classList.toggle("toggled-class");
+        console.log("Contains 'added-class':", beforePara.classList.contains("added-class"));
+    </script>
+
+    <h2>10. Events</h2>
+    <script>
+        // Event handling
+        function clickHandler() {
+            alert("Element clicked!");
+        }
+
+        // Add and remove event listener
+        beforePara.addEventListener("click", clickHandler);
+        beforePara.removeEventListener("click", clickHandler);
+
+        // Event object usage
+        beforePara.addEventListener("mouseover", function(event) {
+            console.log("Event Type:", event.type);
+            console.log("Target Element:", event.target);
+        });
+
+        // Event bubbling (false) and capturing (true)
+        document.body.addEventListener("click", function() {
+            console.log("Body Clicked - Bubbling");
+        }, false);
+
+        document.body.addEventListener("click", function() {
+            console.log("Body Clicked - Capturing");
+        }, true);
+
+        // Inline event (not recommended, for learning only)
+        const inlineBtn = document.createElement("button");
+        inlineBtn.setAttribute("onclick", "alert('Clicked via HTML attribute')");
+        inlineBtn.textContent = "Inline Event Button";
+        document.body.appendChild(inlineBtn);
+    </script>
+
+    <h2>11. Event Delegation</h2>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script>
+        // Event delegation using parent
+        const list = document.getElementById("list");
+        list.addEventListener("click", function(e) {
+            if (e.target && e.target.nodeName === "LI") {
+                alert("Clicked on: " + e.target.textContent);
+            }
+        });
+    </script>
+
+    <h2>12. Functions</h2>
+    <script>
+        // Function declaration
+        function greet(name) {
+            return "Hello, " + name + "!";
+        }
+        console.log(greet("Alice"));
+
+        // Function expression
+        const farewell = function(name) {
+            return "Goodbye, " + name + ".";
+        };
+        console.log(farewell("Bob"));
+
+        // Arrow function
+        const welcome = (name) => `Welcome, ${name}!`;
+        console.log(welcome("Charlie"));
+    </script>
+</body>
+</html>

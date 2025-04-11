@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<head>
+    <title>DOM</title>
+</head>
+<body>
+<div>
+    <p id="message"> Hello DOM </p> <!-- Learning Get element by ID -->
+    <script>
+        // Learning Get element by ID
+        let messageParagraph = document.getElementById("message");
+        console.log(messageParagraph);
+    </script>
+
+    <input type="radio" name="language" value="JavaScript" id="radio-js"> <!-- Learning Get element by name -->
+    <input type="radio" name="language" value="Python" id="radio-py">
+    <input type="radio" name="language" value="Java" id="radio-java">
+</div>
+
+<div>
+    <h1> Hello </h1> <!-- First heading -->
+    <h1> World </h1> <!-- Second heading -->
+    <script>
+        // Learning Get elements by tag name
+        let headingList = document.getElementsByTagName("h1");
+        console.log(headingList);
+    </script>
+</div>
+
+<div>
+    <h1 class="message1"> Hello </h1> <!-- Class message1 -->
+    <div id="container"> 
+        <h1>
+            Hello World
+            <span class="message2"> Hello </span> <!-- Class message2 -->
+            <span class="message2"> World </span> <!-- Class message2 -->
+        </h1> 
+    </div>
+    <script>
+        // Learning Get elements by class name
+        let message1Elements = document.getElementsByClassName("message1");
+        console.log(message1Elements);
+
+        // Another way: class on another element
+        let containerDiv = document.getElementById("container");
+        let message2Spans = containerDiv.getElementsByClassName("message2");
+        console.log(message2Spans);
+    </script>
+
+    <script>
+        // Learning querySelector
+        let firstMessage1Element = document.querySelector(".message1");
+        console.log(firstMessage1Element);
+
+        // Learning querySelectorAll
+        let allMessage2Elements = document.querySelectorAll(".message2");
+        console.log(allMessage2Elements);
+
+        // Learning querySelector with ID
+        let containerElementById = document.querySelector("#container");
+        console.log(containerElementById);
+
+        // Learning querySelectorAll on another element by parent ID
+        let message2ElementsInContainer = containerDiv.querySelectorAll(".message2");
+        console.log(message2ElementsInContainer);
+    </script>
+</div>
+
+<!-- Tranversing elements-->
+ <div class="title">
+    <p class="text"> Hellow</p>
+    <p> welcome</p>
+    <p> to </p>
+    <p> DOM </p>
+    <p> Traversing </p>
+    <p> elements </p>
+ </div>
+<script>
+    // Learning parentNode
+    let titleDiv = document.querySelector(".title");
+    let parentElement = titleDiv.parentNode;
+    console.log(parentElement);
+
+    // Learning childNodes
+    let childNodes = titleDiv.childNodes;
+    console.log(childNodes);
+
+    // Learning firstChild and lastChild
+    let firstChild = titleDiv.firstChild;
+    let lastChild = titleDiv.lastChild;
+    console.log(firstChild);
+    console.log(lastChild);
+
+    // Learning nextSibling and previousSibling
+    let nextSibling = titleDiv.nextSibling;
+    let previousSibling = titleDiv.previousSibling;
+    console.log(nextSibling);
+    console.log(previousSibling);
+    // Learning firstElementChild and lastElementChild
+    let firstElementChild = titleDiv.firstElementChild;
+    let lastElementChild = titleDiv.lastElementChild;
+    console.log(firstElementChild);
+    console.log(lastElementChild);
+    // Learning nextElementSibling and previousElementSibling
+    let nextElementSibling = titleDiv.nextElementSibling;
+    let previousElementSibling = titleDiv.previousElementSibling;
+    console.log(nextElementSibling);
+    console.log(previousElementSibling);
+
+    // Learning parentElement . childnodes
+    let parentElementChildNodes = titleDiv.parentElement.childNodes;
+    console.log(parentElementChildNodes);
+    // Learning parentElement . children
+    let parentElementChildren = titleDiv.parentElement.children;
+    console.log(parentElementChildren);
+    // Learning parentElement . firstElementChild
+    let parentElementFirstChild = titleDiv.parentElement.firstElementChild;
+    console.log(parentElementFirstChild);
+</script>
+
+<script>
+    // Learning createElement
+    let newElement = document.createElement("p");
+    newElement.textContent = "This is a new paragraph.";
+    console.log(newElement);
+
+    // Manipulating styles of the new element
+    newElement.style.color = "red"; // Change color to red
+    newElement.style.fontSize = "20px"; // Change font size to 20px
+    newElement.style.fontWeight = "bold"; // Change font weight to bold
+    newElement.style.fontFamily = "Arial"; // Change font family to Arial
+
+    // Appending the new element to the title div
+    titleDiv.appendChild(newElement);
+
+    // Using textContent to modify content
+    newElement.textContent = "Updated paragraph content using textContent.";
+
+    // Using innerHTML to modify content
+    newElement.innerHTML = "<strong>Updated content with innerHTML.</strong>";
+
+    // Using after() to insert a new element after the current one
+    newElement.after(document.createElement("hr"));
+
+    // Using append() to add another element
+    newElement.append(" Additional text added using append().");
+
+    // Using prepend() to add content at the beginning
+    newElement.prepend("Prepended text. ");
+
+    // Using insertAdjacentHTML() to insert HTML
+    newElement.insertAdjacentHTML("beforeend", "<em> Inserted HTML using insertAdjacentHTML.</em>");
+
+    // Using replaceChild() to replace the new element
+    let replacementElement = document.createElement("p");
+    replacementElement.textContent = "This is a replacement paragraph.";
+    titleDiv.replaceChild(replacementElement, newElement);
+
+    // Using cloneNode() to clone the replacement element
+    let clonedElement = replacementElement.cloneNode(true);
+    titleDiv.appendChild(clonedElement);
+
+    // Using removeChild() to remove the cloned element
+    titleDiv.removeChild(clonedElement);
+
+    // Using insertBefore() to insert an element before another
+    let anotherElement = document.createElement("p");
+    anotherElement.textContent = "Inserted before the replacement element.";
+    titleDiv.insertBefore(anotherElement, replacementElement);
+
+    // Attribute methods
+    anotherElement.setAttribute("data-custom", "customValue"); // setAttribute
+    console.log(anotherElement.getAttribute("data-custom")); // getAttribute
+    console.log(anotherElement.hasAttribute("data-custom")); // hasAttribute
+    anotherElement.removeAttribute("data-custom"); // removeAttribute
+
+    // Manipulating styles using cssText
+    anotherElement.style.cssText = "color: blue; font-size: 18px; font-style: italic;";
+
+    // Using getComputedStyle()
+    let computedStyle = getComputedStyle(anotherElement);
+    console.log(computedStyle.color);
+
+    // Using className property
+    anotherElement.className = "new-class";
+    console.log(anotherElement.className);
+
+    // Using classList property
+    anotherElement.classList.add("additional-class");
+    anotherElement.classList.remove("new-class");
+    anotherElement.classList.toggle("toggle-class");
+    console.log(anotherElement.classList.contains("additional-class"));
+
+    // JavaScript Events
+    anotherElement.addEventListener("click", function () {
+        alert("Element clicked!");
+    });
+
+    // Removing the event listener
+    let clickHandler = function () {
+        alert("This will be removed.");
+    };
+    anotherElement.addEventListener("click", clickHandler);
+    anotherElement.removeEventListener("click", clickHandler);
+
+  </script>  
+</body>
+</html>
