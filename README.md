@@ -1,4 +1,8 @@
-# webtech2
+# 🌐 WebTech2 – Project Overview
+
+Access the project here: [www.d4mr0.tech](https://www.d4mr0.tech)
+
+---
 
 ## Helpful Websites
 
@@ -72,6 +76,46 @@ A quick reference for working with the **Document Object Model (DOM)** in JavaSc
 | Modify style                     | `el.style.color = "blue"`                |
 
 ---
+
+## 📁 Project Structure (Click to view files)
+
+- [dom.html](https://www.d4mr0.tech/dom.html)
+- [topics.html](https://www.d4mr0.tech/topics.html)
+
+### 📂 Quizzes
+- [quiz1.html](https://www.d4mr0.tech/quiz1.html)
+- [quiz2.html](https://www.d4mr0.tech/quiz2.html)
+
+### 📂 JS/
+- [dropmenu.html](https://www.d4mr0.tech/JS/dropmenu.html)
+- [dropmenu.js](https://www.d4mr0.tech/JS/dropmenu.js)
+- [index.html](https://www.d4mr0.tech/JS/index.html)
+- [script.js](https://www.d4mr0.tech/JS/script.js)
+
+### 📂 lesson 2/
+- [2 lesson.pdf](https://www.d4mr0.tech/lesson%202/2%20lesson.pdf)
+- [index.html](https://www.d4mr0.tech/lesson%202/lesson%202/index.html)
+- [app.js](https://www.d4mr0.tech/lesson%202/lesson%202/app.js)
+
+### 📂 lesson 3/
+- [3 lesson.pdf](https://www.d4mr0.tech/lesson%203/3%20lesson.pdf)
+- [4 lesson.pdf](https://www.d4mr0.tech/lesson%203/4%20lesson.pdf)
+- [index.html](https://www.d4mr0.tech/lesson%203/lesson%203/index.html)
+- [app.js](https://www.d4mr0.tech/lesson%203/lesson%203/app.js)
+
+### 📂 lesson 4/
+- [index.html](https://www.d4mr0.tech/lesson%204/lesson%204/index.html)
+- [app.js](https://www.d4mr0.tech/lesson%204/lesson%204/app.js)
+
+### 📂 lesson 5/
+- [7 lesson.pdf](https://www.d4mr0.tech/lesson%205/7%20lesson.pdf)
+- [index.html](https://www.d4mr0.tech/lesson%205/lesson%205/index.html)
+- [app.js](https://www.d4mr0.tech/lesson%205/lesson%205/app.js)
+
+### 📂 lesson 6/
+- [index.html](https://www.d4mr0.tech/lesson%206/lesson%206/index.html)
+- [app.js](https://www.d4mr0.tech/lesson%206/lesson%206/app.js)
+
 
 ## License
 
