@@ -2,6 +2,11 @@
 
 Access the project here: [www.d4mr0.tech](https://www.d4mr0.tech)
 
+
+```js for react project 4
+npm install .
+npm install styled-components
+```
 ---
 
 ## Helpful Websites
