@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Tasks</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    section { margin-bottom: 30px; }
+  </style>
+</head>
+<body>
+
+  <!-- Task 1 -->
+  <section>
+    <h2>Task 1: Statistics</h2>
+    <input type="number" id="numInput" placeholder="Enter a number">
+    <button id="addNum">Add</button>
+    <button id="calculateStats">Statistics</button>
+    <p id="statsOutput"></p>
+  </section>
+
+  <!-- Task 2 -->
+  <section>
+    <h2>Task 2: Alphabetical Sort</h2>
+    <input type="text" id="nameInput" placeholder="Enter a name">
+    <button id="addName">Add</button>
+    <button id="sortNames">Alphabetical Sort</button>
+    <ul id="nameList"></ul>
+  </section>
+
+  <!-- Task 3 -->
+  <section>
+    <h2>Task 3: Online Store</h2>
+    <input type="text" id="productName" placeholder="Product name">
+    <input type="number" id="productPrice" placeholder="Price">
+    <button id="addProduct">Add</button>
+    <button id="ShowPrice">Show Price</button>
+    <p id="totalPrice"></p>
+  </section>
+
+  <!-- Task 4 -->
+  <section>
+    <h2>Task 4: Text Styling</h2>
+    <input type="text" id="textInput" placeholder="Enter text">
+    <select id="styleSelect">
+      <option value="bold">Bold</option>
+      <option value="italic">Italic</option>
+      <option value="color">Color</option>
+    </select>
+    <button id="applyStyle">Apply Style</button>
+    <h2 id="styledText">The text will appear here</h2>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

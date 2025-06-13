@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>4 Tasks</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    section { margin-bottom: 30px; }
+    #styledText {
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 1: Statistics (sum and average) -->
+  <section>
+    <h2>Task 1: Number Statistics</h2>
+    <input type="number" id="numInput" placeholder="Enter a number">
+    <button id="addNum">Add</button>
+    <button id="calculateStats">Statistics</button>
+    <p id="statsOutput"></p>
+  </section>
+
+  <!-- Task 2: Text styling -->
+  <section>
+    <h2>Task 2: Style Text</h2>
+    <input type="text" id="inputText" placeholder="Enter text">
+    <select id="fontSizeSelect">
+      <option value="16px">16px</option>
+      <option value="20px">20px</option>
+      <option value="24px">24px</option>
+    </select>
+    <select id="alignmentSelect">
+      <option value="left">Left</option>
+      <option value="center">Center</option>
+      <option value="right">Right</option>
+    </select>
+    <select id="backgroundColorSelect">
+      <option value="black">Black Background</option>
+      <option value="white">White Background</option>
+    </select>
+    <button id="applyTextStyles">Apply Style</button>
+    <div id="styledText">Your text will appear here</div>
+  </section>
+
+  <!-- Task 3: Online store -->
+  <section>
+    <h2>Task 3: Online Store</h2>
+    <input type="text" id="productName" placeholder="Product name">
+    <input type="number" id="productPrice" placeholder="Price">
+    <button id="addProduct">Add</button>
+    <button id="ShowPrice">Show Price</button>
+    <p id="totalPrice"></p>
+  </section>
+
+  <!-- Task 4: Filter even numbers -->
+  <section>
+    <h2>Task 4: Show Even Numbers</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button id="addNumber">Add</button>
+    <button id="filterEven">Show Only Even Numbers</button>
+    <p id="output"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
