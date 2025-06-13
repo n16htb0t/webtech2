@@ -1,0 +1,116 @@
+<html>
+<body>
+
+<h2>Question 1</h2>
+<p> 1. Alphabet Pyramid Task: Write a function alphabet Pyramid that takes a number and prints a pyramid
+of letters up to i rows.<br>
+A<br>
+AB<br>
+ABC<br>
+ABCD<br>
+Console.log(Pyramid(5) --></p>
+
+<h3> Answer: Check code</h3>
+<script>
+function alphabetPyramid(rows) {
+    const outputDiv = document.createElement('div');
+    for (let i = 1; i <= rows; i++) {
+        let row = '';
+        for (let j = 0; j < i; j++) {
+            row += String.fromCharCode(65 + j);
+        }
+        console.log(row);
+
+        const rowElement = document.createElement('p');
+        rowElement.textContent = row;
+        outputDiv.appendChild(rowElement);
+    }
+    document.body.appendChild(outputDiv);
+}
+
+const userInput = prompt("Enter the number of rows for the alphabet pyramid:");
+const rows = parseInt(userInput, 10);
+if (!isNaN(rows) && rows > 0) {
+    alphabetPyramid(rows);
+} else {
+    console.log("Invalid input. Please enter a positive number.");
+}
+</script>
+
+
+<h2>Question 2</h2>
+
+<p>2. Reverse Words in a Sentence<br>
+Task: Write a function reverseWords that reverses the order of words in a sentence but keeps the words
+themselves unchanged.<br>
+console.log(reverseWords(&quot;JavaScript is fun&quot;)); // &quot;fun is JavaScript&quot; </p>
+<h3> Answer: Check code</h3>
+<script>
+    function reverseWords(sentence) {
+        const words = sentence.split(' ');
+        const reversed = words.reverse().join(' ');
+        console.log(reversed);
+
+        const outputDiv = document.createElement('div');
+        const resultElement = document.createElement('p');
+        resultElement.textContent = reversed;
+        outputDiv.appendChild(resultElement);
+        document.body.appendChild(outputDiv);
+    }
+
+    reverseWords("JavaScript is fun");
+</script>
+
+
+<h2>Question 3: </h2>
+
+<p>  Count Vowels in a String
+Task: Write a function countVowe l s that counts the number of vowels (a, e, i, o, u) in a given string.
+console.log(countVowels(&quot;Hello World&quot;)); // 3 </p>
+<h3> Answer: Check code</h3>
+<script>
+    function countVowels(str) {
+        const vowels = 'aeiouAEIOU';
+        let count = 0;
+        for (let char of str) {
+            if (vowels.includes(char)) {
+                count++;
+            }
+        }
+        console.log(count);
+
+        const outputDiv = document.createElement('div');
+        const resultElement = document.createElement('p');
+        resultElement.textContent = `Number of vowels: ${count}`;
+        outputDiv.appendChild(resultElement);
+        document.body.appendChild(outputDiv);
+    }
+
+    countVowels("Hello World");
+</script>
+
+<h2>Question 4: </h2>
+<p> 4. Reverse an Array Without Using reverse
+Task: Write a function reverseArray that returns a new array with elements in reverse order.
+console.log(reverseArray([1, 2, 3, 4, 5])); </p>
+<h3> Answer: Check code</h3>
+<script>
+    function reverseArray(arr) {
+        const reversed = [];
+        for (let i = arr.length - 1; i >= 0; i--) {
+            reversed.push(arr[i]);
+        }
+        console.log(reversed);
+
+        const outputDiv = document.createElement('div');
+        const resultElement = document.createElement('p');
+        resultElement.textContent = `Reversed Array: [${reversed.join(', ')}]`;
+        outputDiv.appendChild(resultElement);
+        document.body.appendChild(outputDiv);
+    }
+
+    reverseArray([1, 2, 3, 4, 5]);
+</script>
+
+</body>
+</html>
