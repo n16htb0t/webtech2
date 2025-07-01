@@ -3,7 +3,8 @@
 Access the project here: [www.d4mr0.tech](https://www.d4mr0.tech)
 
 Web 1240 - [https://n16htb0t.github.io/WEB_1240/](https://n16htb0t.github.io/WEB_1240/)
-         
+ 
+- [SessionStorage_multipleButton](https://www.d4mr0.tech/jsQuiz/User3/SessionStorage_Multiplebuttons.html)        
 - [MultipleButtons](https://www.d4mr0.tech/jsQuiz/User3/Multiplebuttons.html)
 - [SessionStorage](https://www.d4mr0.tech/jsQuiz/User3/SessionStorage.html)
 - [UIStorage](https://www.d4mr0.tech/jsQuiz/User3/uiStorage.html)
