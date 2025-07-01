@@ -8,14 +8,12 @@ Web 1240 - [https://n16htb0t.github.io/WEB_1240/](https://n16htb0t.github.io/WEB
 - [SessionStorage](https://www.d4mr0.tech/jsQuiz/User3/SessionStorage.html)
 - [UIStorage](https://www.d4mr0.tech/jsQuiz/User3/uiStorage.html)
 
+- [USER1-single](https://www.d4mr0.tech/jsQuiz/user1/index.html)
+- [USER1-Seprate](https://www.d4mr0.tech/jsQuiz/user1/sep/index.html)
 
-- [https://www.d4mr0.tech/jsQuiz/user1/index.html](https://www.d4mr0.tech/jsQuiz/user1/index.html)
-- [https://www.d4mr0.tech/jsQuiz/user1/sep/index.html](https://www.d4mr0.tech/jsQuiz/user1/sep/index.html)
-
-
-- [https://www.d4mr0.tech/jsQuiz/user2/t2/index.html](https://www.d4mr0.tech/jsQuiz/user2/t2/index.html)
-- [https://www.d4mr0.tech/jsQuiz/user2/t2/index2.html](https://www.d4mr0.tech/jsQuiz/user2/t2/index.html)
-- [https://www.d4mr0.tech/jsQuiz/user2/sep/index.html](https://www.d4mr0.tech/jsQuiz/user2/sep/index.html)
+- [t2 ](https://www.d4mr0.tech/jsQuiz/user2/t2/index.html)
+- [t2-ind2](https://www.d4mr0.tech/jsQuiz/user2/t2/index.html)
+- [user2-sep](https://www.d4mr0.tech/jsQuiz/user2/sep/index.html)
 
 - [https://github.com/n16htb0t/WEB_1240](https://github.com/n16htb0t/WEB_1240)
 
