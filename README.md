@@ -4,9 +4,9 @@ Access the project here: [www.d4mr0.tech](https://www.d4mr0.tech)
 
 Web 1240 - [https://n16htb0t.github.io/WEB_1240/](https://n16htb0t.github.io/WEB_1240/)
          
-- [https://www.d4mr0.tech/jsQuiz/User3/Multiplebuttons.html](https://www.d4mr0.tech/jsQuiz/User3/Multiplebuttons.html)
-- [https://www.d4mr0.tech/jsQuiz/User3/SessionStorage.html](https://www.d4mr0.tech/jsQuiz/User3/SessionStorage.html)
-- [https://www.d4mr0.tech/jsQuiz/User3/uiStorage.html](https://www.d4mr0.tech/jsQuiz/User3/uiStorage.html)
+- [MultipleButtons](https://www.d4mr0.tech/jsQuiz/User3/Multiplebuttons.html)
+- [SessionStorage](https://www.d4mr0.tech/jsQuiz/User3/SessionStorage.html)
+- [UIStorage](https://www.d4mr0.tech/jsQuiz/User3/uiStorage.html)
 
 
 - [https://www.d4mr0.tech/jsQuiz/user1/index.html](https://www.d4mr0.tech/jsQuiz/user1/index.html)
