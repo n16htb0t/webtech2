@@ -15,7 +15,7 @@ Web 1240 - [https://n16htb0t.github.io/WEB_1240/](https://n16htb0t.github.io/WEB
 - [t2-ind2](https://www.d4mr0.tech/jsQuiz/user2/t2/index.html)
 - [user2-sep](https://www.d4mr0.tech/jsQuiz/user2/sep/index.html)
 
-- [https://github.com/n16htb0t/WEB_1240](https://github.com/n16htb0t/WEB_1240)
+- [WEB_1240](https://github.com/n16htb0t/WEB_1240)
 
 Drive:  [https://drive.google.com/drive/u/2/folders/15j1Es0mq-1nEVQbMYGq2s1oD8vQGeaYx](https://drive.google.com/drive/u/2/folders/15j1Es0mq-1nEVQbMYGq2s1oD8vQGeaYx)
 
