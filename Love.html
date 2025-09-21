@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Message from My Heart</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+                opacity: 0.9;
+            }
+        }
+        .float-animation {
+            animation: float 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-pink-50 to-purple-50 min-h-screen flex flex-col items-center p-4">
+
+    <!-- Floating hearts for creative effect -->
+    <span class="absolute top-1/4 left-1/4 text-4xl text-pink-400 float-animation" style="animation-duration: 6s; animation-delay: 0.5s;">❤️</span>
+    <span class="absolute top-1/2 right-1/4 text-3xl text-purple-400 float-animation" style="animation-duration: 5s; animation-delay: 1s;">❤️</span>
+    <span class="absolute bottom-1/4 left-1/2 text-5xl text-red-400 float-animation" style="animation-duration: 7s; animation-delay: 2s;">❤️</span>
+    <span class="absolute top-1/3 left-1/2 text-2xl text-pink-300 float-animation" style="animation-duration: 4s; animation-delay: 1.5s;">❤️</span>
+    <span class="absolute top-1/2 left-1/4 text-xl text-purple-500 float-animation" style="animation-duration: 5.5s; animation-delay: 2.5s;">❤️</span>
+    <span class="absolute bottom-1/3 right-1/3 text-4xl text-red-500 float-animation" style="animation-duration: 6.5s; animation-delay: 3s;">❤️</span>
+
+    <!-- Image element on top -->
+    <div class="w-full max-w-xs mx-auto mb-8 transform transition-all duration-300 hover:scale-105">
+        <!-- Replace the URL below with the URL of her picture to make it personal -->
+        <img src="./ik.jpg" alt="A special memory" class="w-full h-auto object-cover rounded-3xl shadow-2xl shadow-purple-100">
+    </div>
+
+    <!-- Main content container -->
+    <div class="relative w-full max-w-xl mx-auto bg-white rounded-3xl shadow-2xl shadow-purple-200 p-8 md:p-12 text-center transform transition-all duration-300 hover:scale-105"
+         style="font-family: 'Inter', sans-serif;">
+
+        <!-- The "Sorry" prop badge -->
+        <div class="absolute top-0 left-0 -mt-4 -ml-4 bg-red-500 text-white font-bold px-4 py-2 rounded-full shadow-lg transform rotate-[-15deg]">
+            Sorry.
+        </div>
+
+        <!-- The "Please" prop badge -->
+        <div class="absolute top-0 right-0 -mt-4 -mr-4 bg-purple-500 text-white font-bold px-4 py-2 rounded-full shadow-lg transform rotate-[15deg]">
+            Please.
+        </div>
+
+        <!-- Main heading -->
+        <h1 class="text-3xl md:text-4xl font-semibold text-purple-800 mb-6 leading-tight">
+            A message from my heart
+        </h1>
+
+        <!-- The core message -->
+        <p class="text-gray-600 mb-6 leading-relaxed">
+            I'm writing this because I can't bear the thought of our last conversation being our last. The silence has been deafening, and I'm so incredibly sorry for the way I acted. I know it was harsh, and I want to explain, not to excuse it, but to give you the full picture.
+        </p>
+
+        <p class="text-gray-600 mb-6 leading-relaxed">
+            That day was one of the worst I've had in a long time. Between late-night lectures, a stressful meeting, and the alcohol I drank to cope, I was completely overwhelmed. It's no excuse for my behavior, and I deeply regret that I let my stress get in the way of treating you with the kindness you deserve.
+        </p>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+            My friend told me to clear the air because I was confused with our mixed conversation in texts, that's why I asked about a relationship.
+        </p>
+
+        <p class="text-gray-600 mb-6 leading-relaxed">
+            I don't need a relationship, and I will not bug you. We can keep what we had a secret if you want, and I am open to discussing any terms. I can also start smoking with you sometimes. I can do my first puff with you.
+        </p>
+
+        <p class="text-gray-600 mb-6 leading-relaxed">
+            I'm open to anything you want, and we can discuss any terms you'd like. If you ever feel we are getting too attached, you can walk away at any time. This website will delete itself in 2 days.
+        </p>
+
+        <!-- A song to express your feelings -->
+        <div class="mb-6 mt-8">
+            <h2 class="text-xl font-semibold text-purple-800 mb-2">A song for a new beginning</h2>
+            <audio controls class="w-full rounded-full shadow-lg">
+                <!-- Replace the URL below with the URL of the song you want to use -->
+                <source src="./song.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <!-- Call to action button to her Instagram -->
+        <a href="https://help.instagram.com/454180787965921" target="_blank" class="inline-block bg-pink-500 text-white font-medium py-3 px-8 rounded-full shadow-lg hover:bg-pink-600 transition-colors duration-300">
+            Click here to a new beginning
+        </a>
+        <p class="text-sm mt-4 text-gray-500">
+            With all my heart,
+        </p>
+        
+    </div>
+</body>
+</html>
